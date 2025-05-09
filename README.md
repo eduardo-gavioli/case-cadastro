@@ -4,16 +4,16 @@
 
 ✨ Funcionalidades
 
-✅ Cadastro de usuários com nome, sobrenome, idade e país
-✅ Envio de notificação assíncrona via RabbitMQ
-✅ Consulta de um cadastro por ID
-✅ Listagem de todos os cadastros
-✅ Atualização parcial do cadastro
-✅ Exclusão de um cadastro
-✅ Exposição da API via API Gateway
-✅ Observabilidade com Grafana, Prometheus e Loki
-✅ Deploy automatizado usando Docker e Kubernetes
-✅ Infraestrutura gerenciada via Terraform na AWS
+✅ Cadastro de usuários com nome, sobrenome, idade e país<br>
+✅ Envio de notificação assíncrona via RabbitMQ<br>
+✅ Consulta de um cadastro por ID<br>
+✅ Listagem de todos os cadastros<br>
+✅ Atualização parcial do cadastro<br>
+✅ Exclusão de um cadastro<br>
+✅ Exposição da API via API Gateway<br>
+✅ Observabilidade com Grafana, Prometheus e Loki<br>
+✅ Deploy automatizado usando Docker e Kubernetes<br>
+✅ Infraestrutura gerenciada via Terraform na AWS<br>
 
 🚀 Tecnologias Utilizadas
 - Spring Boot (Framework principal)
@@ -34,7 +34,7 @@ Antes de iniciar, certifique-se de ter instalado:
 - Terraform (para provisionamento)
 - PostgreSQL (Banco de dados)
 
-📜 Instalação
+📜 Instalação<br>
 1️⃣ Clone o repositório
 git clone https://github.com/seu-repositorio/cadastro-api.git
 cd cadastro-api
@@ -60,12 +60,12 @@ Acesse o Grafana para visualizar métricas:
 http://localhost:3000
 
 🛠 Endpoints da API
-Cadastro
-✅ POST /cadastros → Criação de cadastro
-✅ GET /cadastros/{id} → Consulta por ID
-✅ GET /cadastros → Listagem de cadastros
-✅ PATCH /cadastros/{id} → Atualização parcial
-✅ DELETE /cadastros/{id} → Exclusão
+Cadastro<br>
+✅ POST /cadastros → Criação de cadastro<br>
+✅ GET /cadastros/{id} → Consulta por ID<br>
+✅ GET /cadastros → Listagem de cadastros<br>
+✅ PATCH /cadastros/{id} → Atualização parcial<br>
+✅ DELETE /cadastros/{id} → Exclusão<br><br>
 Exemplo de requisição:
 POST /cadastros
 {
@@ -84,25 +84,25 @@ mvn test
 
 Cobertura esperada: 90%+ 🛡️
 
-📦 Estrutura do Projeto
-cadastro-api/
-├── src/main/java/com/example/cadastro/
-│   ├── domain/       # Entidades e regras de negócio
-│   ├── application/  # Casos de uso
-│   ├── infrastructure/  # API, Banco de Dados, Mensageria
-├── docker/
-├── k8s/
-├── terraform/
-├── README.md
-├── pom.xml
+📦 Estrutura do Projeto<br>
+cadastro-api/<br>
+├── src/main/java/com/example/cadastro/<br>
+│   ├── domain/       # Entidades e regras de negócio<br>
+│   ├── application/  # Casos de uso<br>
+│   ├── infrastructure/  # API, Banco de Dados, Mensageria<br>
+├── docker/<br>
+├── k8s/<br>
+├── terraform/<br>
+├── README.md<br>
+├── pom.xml<br>
 
 
 
-🏗 Deploy AWS via Terraform
-Para provisionar a infraestrutura:
-cd terraform
-terraform init
-terraform apply
+🏗 Deploy AWS via Terraform<br>
+Para provisionar a infraestrutura:<br>
+cd terraform<br>
+terraform init<br>
+terraform apply<br>
 
 
 Isso criará RDS (PostgreSQL), API Gateway, RabbitMQ e Kubernetes (EKS) na AWS.
