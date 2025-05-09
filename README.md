@@ -35,28 +35,28 @@ Antes de iniciar, certifique-se de ter instalado:
 - PostgreSQL (Banco de dados)
 
 📜 Instalação<br>
-1️⃣ Clone o repositório
-git clone https://github.com/seu-repositorio/cadastro-api.git
+1️⃣ Clone o repositório<br>
+git clone https://github.com/eduardo-gavioli/case-cadastro.git<br>
 cd cadastro-api
 
 
-2️⃣ Configurar variáveis de ambiente
-Edite o arquivo application.yml ou crie um .env:
-DATABASE_URL=jdbc:postgresql://localhost:5432/cadastro
-RABBITMQ_URL=amqp://guest:guest@localhost
+2️⃣ Configurar variáveis de ambiente<br>
+Edite o arquivo application.yml ou crie um .env:<br>
+DATABASE_URL=jdbc:postgresql://localhost:5432/cadastro<br>
+RABBITMQ_URL=amqp://guest:guest@localhost<br>
 
 
-3️⃣ Executar via Docker
-docker-compose up -d
+3️⃣ Executar via Docker<br>
+docker-compose up -d<br>
 
 
-4️⃣ Executar via Kubernetes
-kubectl apply -f k8s/deployment.yaml
-kubectl apply -f k8s/service.yaml
+4️⃣ Executar via Kubernetes<br>
+kubectl apply -f k8s/deployment.yaml<br>
+kubectl apply -f k8s/service.yaml<br>
 
 
-5️⃣ Verificar logs e métricas
-Acesse o Grafana para visualizar métricas:
+5️⃣ Verificar logs e métricas<br>
+Acesse o Grafana para visualizar métricas:<br>
 http://localhost:3000
 
 🛠 Endpoints da API
