@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cadastro-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cadastro-api
+  template:
+    metadata:
+      labels:
+        app: cadastro-api
+    spec:
+      containers:
+        - name: cadastro-api
+          image: meu-registro/cadastro-api:latest
+          ports:
+            - containerPort: 8080

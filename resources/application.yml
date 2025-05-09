@@ -1,0 +1,2 @@
+DATABASE_URL=jdbc:postgresql://localhost:5432/cadastro
+RABBITMQ_URL=amqp://guest:guest@localhost
