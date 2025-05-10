@@ -1,0 +1,11 @@
+aws_region          = "us-east-1"
+aws_vpc_id         = "vpc-123456"
+db_name            = "cadastro_db"
+db_user            = "admin"
+db_password        = "supersecretpassword"
+eks_cluster_name   = "cadastro-eks"
+instance_type      = "t3.micro"
+api_gateway_name   = "cadastro-api-gateway"
+rabbitmq_instance_type = "t3.micro"
+monitoring_enabled = true
+tls_enabled        = true

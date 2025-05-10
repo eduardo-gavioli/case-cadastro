@@ -1,19 +1,51 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: cadastro-api
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
-      app: cadastro-api
-  template:
-    metadata:
-      labels:
-        app: cadastro-api
-    spec:
-      containers:
-        - name: cadastro-api
-          image: meu-registro/cadastro-api:latest
-          ports:
-            - containerPort: 8080
+version: "3.8"
+
+services:
+  api:
+    image: meu-repositorio/cadastro-api:latest
+    container_name: cadastro-api
+    depends_on:
+      - db
+      - rabbitmq
+    environment:
+      - DATABASE_URL=jdbc:postgresql://db:5432/cadastro
+      - DB_USER=admin
+      - DB_PASSWORD=supersecretpassword
+      - RABBITMQ_URL=amqp://guest:guest@rabbitmq
+    ports:
+      - "8080:8080"
+    networks:
+      - cadastro-net
+
+  db:
+    image: postgres:15
+    container_name: cadastro-db
+    environment:
+      - POSTGRES_DB=cadastro
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=supersecretpassword
+    ports:
+      - "5432:5432"
+    networks:
+      - cadastro-net
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: cadastro-rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+      - "5672:5672"
+      - "15672:15672"  # Interface de gerenciamento
+    networks:
+      - cadastro-net
+
+networks:
+  cadastro-net:
+    driver: bridge
+
+volumes:
+  db-data:
