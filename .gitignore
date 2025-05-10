@@ -12,6 +12,9 @@ target/
 *.iml
 *.ipr
 
+### Terraform ###
+./terraform
+
 ### Eclipse ###
 .apt_generated
 .classpath
