@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   api:
-    image: meu-repositorio/cadastro-api:latest
+    image: nginx:latest
     container_name: cadastro-api
     depends_on:
       - db
