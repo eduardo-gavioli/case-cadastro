@@ -2,9 +2,12 @@ package com.example.cadastro.domain;
 
 import lombok.Data;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@Entity
+@Getter
+@Setter
+@Entity(name = "cadastro")
 @Table(name = "cadastro")
 public class Cadastro {
     @Id
