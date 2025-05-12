@@ -58,6 +58,13 @@
             <version>2.3.1</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.javassist/javassist -->
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.25.0-GA</version>
+        </dependency>
+
         <!-- PostgreSQL Driver (Conexão com banco de dados) -->
         <dependency>
             <groupId>org.postgresql</groupId>
